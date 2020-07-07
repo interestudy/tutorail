@@ -1,0 +1,33 @@
+{% extends 'orderSystem/index.html' %}
+
+{% block title %} 注册 {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div style="height: 30px"></div>
+                <div class="card shadow-lg">
+                    <div class="card-header text-center text-light bg-primary">
+                        <h3 class="mb-auto">注册</h3>
+                    </div>
+                    <div class="card-body">
+                        {% if message %}
+                        <div class="alert alert-warning" role="alert">
+                           {{ message }}
+                        </div>
+                        {% endif %}
+                        <form action="{% url 'orderSystem:register' %}" method="post">
+                            {% csrf_token %}
+                            {{ r_form.as_p }}
+                            <button type="submit" class="btn bg-primary text-light" style="width: 100%">提交</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+{% endblock %}

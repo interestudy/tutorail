@@ -1,0 +1,35 @@
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header border-0">
+                <h5 class=" text-center">你想删除这个订单吗？</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center border-0">
+                <table class="table table-bordered">
+                    <thead class="bg-secondary text-light">
+                    <tr>
+                        <th scope="col">客户</th>
+                        <th scope="col">产品</th>
+                        <th scope="col">状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="customer_id"></td>
+                        <td id="product_id"></td>
+                        <td id="status_id"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">no</button>
+                <button id='1' type="button" class="btn btn-primary">delete order</button>
+            </div>
+        </div>
+    </div>
+</div>
